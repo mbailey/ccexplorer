@@ -30,11 +30,8 @@ jobs:
       - name: Install Python ${{ matrix.python-version }}
         run: uv python install ${{ matrix.python-version }}
 
-      - name: Install ccexplorer with dev extras
-        run: uv pip install --system -e ".[dev]"
-
       - name: Run pytest
-        run: uv run --python ${{ matrix.python-version }} --with pytest pytest -q
+        run: uv run --python ${{ matrix.python-version }} --extra dev pytest -q
 
   lint:
     name: ruff
@@ -42,5 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
       - name: ruff check
         run: uv run --with ruff ruff check ccexplorer tests
