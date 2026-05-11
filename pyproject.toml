@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ccexplorer"
-version = "0.0.1"
+version = "0.0.2"
 description = "Local-first Cost Explorer for Claude Code sessions -- slice your spend by tool, project, session, model"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -42,6 +42,9 @@ dev = [
 
 [project.scripts]
 cce = "ccexplorer.cli:main"
+# `ccexplorer` alias so `uvx ccexplorer` and `pipx run ccexplorer` work
+# (these expect the executable name to match the package name).
+ccexplorer = "ccexplorer.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/mbailey/ccexplorer"
