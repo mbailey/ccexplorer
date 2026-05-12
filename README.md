@@ -9,6 +9,9 @@ can slice your spend by **tool, project, session, model, and time**.
 > CLI query subcommands (`get-cost-and-usage`, `get-dimension-values`)
 > and the Trusted-Advisor-style recommendations engine are next.
 
+<img width="2245" height="1442" alt="image" src="https://github.com/user-attachments/assets/b0a7575c-c181-4717-9e34-d6b6d03921c7" />
+
+
 ## Why
 
 ccusage already does cost calculation well. ccexplorer adds two things
